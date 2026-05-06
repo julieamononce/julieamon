@@ -5,7 +5,6 @@
 const items = [
     { name: "about", label: "About"},
     { name: "projects", label: "Projects"},
-    { name: "experience", label: "Experience"},
     { name: "contact", label: "Contact"},
 ];
 
