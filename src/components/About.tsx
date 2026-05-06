@@ -62,7 +62,7 @@ const About = () => {
                     </motion.div>
 
                     <motion.div>
-                        <h3 className="font-mono text-sm text-primary mb-4">
+                        <h3 className="font-mono text-sm mb-4 text-accent">
                             {'> Skills & Technologies'}
                         </h3>
                         <div className="flex flex-wrap gap-3">
