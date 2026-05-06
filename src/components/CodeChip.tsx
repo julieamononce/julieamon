@@ -4,9 +4,21 @@ type Props = {
   text: string;
   className?: string;
   delay?: number;
+  float?: boolean;
 };
 
-const CodeChip = ({ text, className = "", delay = 0 }: Props) => {
+const CodeChip = ({ text, className = "", delay = 0, float = false }: Props) => {
+  const baseClasses =
+    "inline-block font-mono text-xs bg-chip px-3 py-1 rounded-full";
+
+  if (!float) {
+    return (
+      <span aria-hidden className={`${baseClasses} ${className}`}>
+        {text}
+      </span>
+    );
+  }
+
   return (
     <motion.span
       aria-hidden
@@ -17,9 +29,7 @@ const CodeChip = ({ text, className = "", delay = 0 }: Props) => {
         ease: "easeInOut",
         delay,
       }}
-      className={`absolute font-mono text-xs md:text-sm text-muted/70
-                  bg-chip/80 backdrop-blur-sm px-3 py-1.5 rounded-full
-                  pointer-events-none ${className}`}
+      className={`${baseClasses} pointer-events-none ${className}`}
     >
       {text}
     </motion.span>

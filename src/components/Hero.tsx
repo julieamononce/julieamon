@@ -3,15 +3,15 @@ import CodeChip from "./CodeChip";
 import { motion } from "motion/react";
 
 const chips = [
-    { text: "<Component />",  className: "top-24 left-30", delay:0 },
-    { text: "✨",  className: "top-45 left-84", delay:-3.4 },
-    { text: "npm run build",  className: "top-32 right-12", delay:-1.2 },
-    { text: "🤖",  className: "top-45 right-60", delay:-1.2 },
-    { text: 'git commit -m "Initial commit"',  className: "top-1/2 left-20", delay:-2.4 },
-    { text: "async/await",  className: "bottom-25 left-40", delay:-3.6 },
-    { text: "📲",  className: "bottom-55 left-60", delay:-3.6 },
-    { text: "👩‍💻",  className: "bottom-50 right-100", delay:-3.4 },
-    { text: "print('Hello World!')",  className: "bottom-45 right-40", delay:-4.8 },
+    { text: "<Component />",  className: "absolute top-24 left-30 text-muted/70", delay:0 },
+    { text: "✨",  className: "absolute top-45 left-84 text-muted/70", delay:-3.4 },
+    { text: "npm run build",  className: "absolute top-32 right-12 text-muted/70", delay:-1.2 },
+    { text: "🤖",  className: "absolute top-45 right-60 text-muted/70", delay:-1.2 },
+    { text: 'git commit -m "Initial commit"',  className: "absolute top-1/2 left-20 text-muted/70", delay:-2.4 },
+    { text: "async/await",  className: "absolute bottom-25 left-40 text-muted/70", delay:-3.6 },
+    { text: "📲",  className: "absolute bottom-55 left-60 text-muted/70", delay:-3.6 },
+    { text: "👩‍💻",  className: "absolute bottom-50 right-100 text-muted/70", delay:-3.4 },
+    { text: "print('Hello World!')",  className: "absolute bottom-45 right-40 text-muted/70", delay:-4.8 },
 ];
 
 const Hero = () => {
@@ -29,7 +29,7 @@ const Hero = () => {
 
             {/* Floating code chips */}
             {chips.map((chip) => (
-                <CodeChip key={chip.text} {...chip} />
+                <CodeChip key={chip.text} float {...chip} />
             ))}
             {/* Centered content */}
             <div className="relative z-10 flex flex-col items-center text-center max-w-3xl gap-6">
