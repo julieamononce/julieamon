@@ -30,6 +30,12 @@ import lisa from "@/assets/LISA.png";
 import gt from "@/assets/GT.png";
 import unet from "@/assets/unet.png";
 import chart from "@/assets/CHART.png";
+import dashboard from "@/assets/dashboard.png";
+import journal from "@/assets/journal.png";
+import ledger from "@/assets/ledger.png";
+import statements from "@/assets/statements.png";
+import taxplanner from "@/assets/taxplanner.png";
+import busratios from "@/assets/busratios.png";
 
 export const projects: Project[] = [
   {
@@ -40,6 +46,55 @@ export const projects: Project[] = [
     tech: ["React", "TypeScript", "Node.js", "Express", "MySQL", "AWS"],
     github: "https://github.com/mcneilkimberly/KeepUp.git",
     live: "https://keepupbookkeeping.netlify.app/login",
+    subProjects: [
+      {
+        title: "Dashboard",
+        description: "After logging in, users are taken to the dashboard where they can view their financial overview, including key metrics, recent transactions, and visualizations of their financial data. The dashboard provides a snapshot of the business's financial health and allows users to quickly access important information.",
+        visuals: [
+          {src: dashboard, alt: "Dashboard", label: "Dashboard", description: "The main dashboard view where users can see an overview of their financial data." }
+        ],
+      },
+      {
+
+        title: "Journal",
+        description: "Users can create, view, and manage journal entries to record their financial transactions. The journal entry interface allows users to input transaction details, categorize expenses and income, and maintain financial records.",
+        visuals: [
+          {src: journal, alt: "Journal Entries", label: "Journal Entries", description: "The journal entries view where users can create, view, and manage their financial transactions." }
+        ],
+      },
+      {
+
+        title: "Ledger",
+        description: "The ledger provides a comprehensive view of all financial transactions, allowing users to track income and expenses, categorize entries, and maintain financial records.",
+        visuals: [
+          {src: ledger, alt: "Ledger", label: "Ledger", description: "The ledger view where users can track all financial transactions in detail." }
+        ],
+      },
+      {
+
+        title: "Business Statements",
+        description: "The business statements provide an overview of the company's financial performance, including income statements, balance sheets, and cash flow statements.",
+        visuals: [
+          {src: statements, alt: "Business Statements", label: "Business Statements", description: "The business statements view where users can see an overview of their financial performance, including income statements, balance sheets, and cash flow statements." }
+        ],
+      },
+      {
+
+        title: "Tax Planner",
+        description: "The tax planner helps users estimate and plan their tax liabilities",
+        visuals: [
+          {src: taxplanner, alt: "Tax Planner", label: "Tax Planner", description: "The tax planner view where users can estimate and plan their tax liabilities." }
+        ],
+      },
+      {
+
+        title: "Business Ratios",
+        description: "The business ratios allow users to analyze key financial metrics and performance indicators, such as profitability ratios, liquidity ratios, and efficiency ratios, to gain insights into their business's financial health and make informed decisions.",
+        visuals: [
+          {src: busratios, alt: "Business Ratios", label: "Business Ratios", description: "The business ratios view where users can analyze key financial metrics and performance indicators." }
+        ],
+      },
+    ],
   },
   {
     slug: "balance",
