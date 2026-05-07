@@ -18,7 +18,7 @@ const Hero = () => {
     return (
         <section
         id="top"
-        className="relative min-h-screen flex items-center justify-center overflow-hidden px-6"
+        className="relative min-h-[100svh] md:min-h-screen flex items-center justify-center overflow-hidden px-6"
         >
             {/* Soft radial glow behind the heading */}
             <div 

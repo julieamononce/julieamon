@@ -1,6 +1,4 @@
-// import { useState, useEffect } from "react";
-// import { motion, AnimatePresence } from "framer-motion";
-//import { Menu, X } from "lucide-react";
+import nameLogo from "../assets/Name.png";
 
 const items = [
     { name: "about", label: "About"},
@@ -10,13 +8,18 @@ const items = [
 
 const Navbar = () => {
     return (
-    <header className="fixed top-0 inset-x-0 z-50 py-4 backdrop-blur-sm bg-surface/70">
-    <nav className="max-w-6xl mx-auto px-6 flex items-center justify-between">
+    <header className="fixed top-0 inset-x-0 z-50 h-16 sm:h-20 backdrop-blur-sm bg-surface/70">
+    <nav className="max-w-6xl mx-auto px-6 h-full flex items-center justify-between">
         {/* Logo */}
-        <a 
+        <a
         href="#"
-        className="font-mono text-lg font-semibold text-ink hover:text-accent transition-colors">
-            {'Julie Amon'}
+        aria-label="Julie Amon - Home"
+        className="flex items-center hover:opacity-80 transition-opacity">
+            <img
+                src={nameLogo}
+                alt="Julie Amon"
+                className="h-22 sm:h-32 w-auto object-contain"
+            />
         </a>
 
         {/* Navigation (responsive) */}
