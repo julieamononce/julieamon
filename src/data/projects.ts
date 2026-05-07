@@ -2,6 +2,7 @@ export interface SubProjectVisual {
   src: string;
   alt: string;
   label: string;
+  description?: string;
 }
 
 export interface SubProject {
@@ -9,6 +10,7 @@ export interface SubProject {
   description: string;
   visuals: SubProjectVisual[];
   github?: string;
+  live?: string;
 }
 
 export interface Project {
@@ -75,8 +77,9 @@ export const projects: Project[] = [
         title: "QGIS project",
         description: "Developed an interactive Manhattan GIS story map combining census income data, bike infrastructure, tourism locations, and transportation layers to explore spatial relationships between economic status and eco-friendly transportation access",
         github: "https://github.com/mcneilkimberly/Manhattan-Interactive-GIS-Story-Map.git",
+        live: "https://manhattan-interactive-gis-map.netlify.app/",
         visuals: [
-          { src: mapSS, alt: "Manhattan GIS story map", label: "Map" },
+          { src: mapSS, alt: "Manhattan GIS story map", label: "Map", description: "From our map, we could visually see how the areas south of central park generally have a greater amount of income. This higher income and popular historic and business locations leads to a higher population and tourism. This vast increase in people and traffic (along with the romantisism of riding a bike in New York City), leads to the increase necessity for a way to easily travel. This results in bikes, bike trails, and bike parking." },
           { src: pres1, alt: "QGIS project screenshot", label: "Screenshot" }
         ],
       },
@@ -85,8 +88,8 @@ export const projects: Project[] = [
         description: "Conducted a spatial autocorrelation analysis of New York’s 2023 county-level unemployment rates using Global Moran’s I and LISA cluster maps to identify statistically significant patterns of unemployment clustering and regional outliers.",
         github: "https://github.com/mcneilkimberly/Spatial-Autocorrelation-Analysis.git",
         visuals: [
-          { src: lisa, alt: "LISA cluster map", label: "Map" },
-          { src: moransp, alt: "MORANSPLOT", label: "Screenshot" },
+          { src: lisa, alt: "LISA cluster map", label: "Map", description: "Based on the Local Spatial Autocorrelation (LISA) analysis performed, we can determine clusters of high and low values and spatial outliers by examining the generated Moran Cluster Map and understanding the quadrant classifications." },
+          { src: moransp, alt: "MORANS PLOT", label: "Model output", description: "There is a statistically significant weak positive spatial autocorrelation in the unemployment rates! This indicates a tendency for counties with similar unemployment rates to be located near each other (clustering), though it’s not very strong." },
         ],
       },
       {
@@ -94,9 +97,9 @@ export const projects: Project[] = [
         description: "Trained and compared U-Net, DeepLabV3, and SegFormer segmentation models on raster imagery and building footprint labels in Purchase, NY to evaluate which model most accurately detected buildings using IoU, Dice Score, and visual mask comparisons.",
         github: "https://github.com/mcneilkimberly/Spatial-AI-Model-Comparison-for-Building-Detection.git",
         visuals: [
-          { src: gt, alt: "Ground Truth", label: "Map" },
-          { src: unet, alt: "U-Net output", label: "Model output" },
-          { src: chart, alt: "Model comparison chart", label: "Chart" },
+          { src: gt, alt: "Ground Truth", label: "Map", description: "Ground truth building footprint labels used for training and evaluation." },
+          { src: unet, alt: "U-Net output", label: "Model output", description: "U-Net achieved the highest IoU and Dice Score, indicating it was the most effective model for building detection in this project."  },
+          { src: chart, alt: "Model comparison chart", label: "Chart", description: "Performance Analysis: U-Net outperformed the other models in terms of IoU and Dice Score."},
         ],
       },
     ],

@@ -31,12 +31,21 @@ const Projects = () => {
                         className="bg-white rounded-2xl border border-slate-200 p-6 md:p-7 flex flex-col gap-4 hover:shadow-lg hover:-translate-y-1 transition"
                         >
                             <div className="flex justify-between items-start gap-4">
-                                <Link
-                                    to={`/projects/${project.slug}`}
-                                    className="text-xl font-bold text-ink hover:text-accent transition-colors"
-                                >
-                                    {project.title}
-                                </Link>
+                                <div className="flex flex-col gap-1">
+                                    <Link
+                                        to={`/projects/${project.slug}`}
+                                        className="text-xl font-bold text-ink hover:text-accent transition-colors"
+                                    >
+                                        {project.title}
+                                    </Link>
+                                    <Link
+                                        to={`/projects/${project.slug}`}
+                                        className="font-mono text-sm text-accent hover:underline"
+                                    >
+                                        view details →
+                                    </Link>
+                                </div>
+
                                 <div className="flex items-center gap-3 text-muted">
                                     {project.github && (
                                         <a href={project.github}
@@ -68,12 +77,7 @@ const Projects = () => {
                                     <CodeChip key={tech} text={tech} className="text-accent" />
                                 ))}
                             </div>
-                            <Link
-                                to={`/projects/${project.slug}`}
-                                className="mt-auto self-start font-mono text-sm text-accent hover:underline"
-                            >
-                                view details →
-                            </Link>
+                            
                         </motion.article>
                     ))}
                 </div>
