@@ -21,7 +21,7 @@ const techStack = [
 
 const About = () => {
     return(
-        <section id="about" className="relative py-24 px-6 overflow-hidden">
+        <section id="about" className="relative py-16 sm:py-24 px-6 overflow-hidden">
             <div className="text-center mb-16">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -73,7 +73,7 @@ const About = () => {
                                     whileInView={{ opacity: 1, scale: 1 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.3, delay: 0.4 + index * 0.05 }}
-                                    className="px-4 py-2 code-block rounded-full font-mono text-sm text-foreground hover:text-primary transition-colors cursor-default"
+                                    className="px-4 py-2 code-block rounded-full font-mono text-xs sm:text-sm text-foreground hover:text-primary transition-colors cursor-default break-words max-w-full"
                                     >
                                     {tech.category}: {tech.skills.join(", ")}
                                 </motion.div>

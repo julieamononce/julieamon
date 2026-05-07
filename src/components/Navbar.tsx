@@ -19,20 +19,16 @@ const Navbar = () => {
             {'Julie Amon'}
         </a>
 
-        {/* Desktop Navigation */}
-        <ul className = "hidden md:flex items-center gap-8">
+        {/* Navigation (responsive) */}
+        <ul className="flex items-center gap-4 sm:gap-8">
             {items.map((item) =>(
                 <li key={item.name}>
-                    <a href={`#${item.name}`} className="text-muted hover:text-accent transition-colors font-medium">
+                    <a href={`#${item.name}`} className="text-sm sm:text-base text-muted hover:text-accent transition-colors font-medium">
                         {item.label}
                     </a>
                 </li>
             ))}
         </ul>
-
-        {/* //////////////////////////////////////////// */}
-        {/* FUTUTRE: Mobile Navigation!!!*/}
-        {/* //////////////////////////////////////////// */}
     </nav>
     </header>
 )
