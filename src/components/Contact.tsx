@@ -28,7 +28,7 @@ const socials = [
 
 const Contact = () => {
     return (
-        <section id="contact" className="relative py-24 px-6 overflow-hidden">
+        <section id="contact" className="relative py-16 sm:py-24 px-6 overflow-hidden">
             <div className="max-w-6xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -38,8 +38,8 @@ const Contact = () => {
                     className="text-center mb-16"
                 >
                     <span className="font-mono text-sm text-accent mb-3 block">{'// Contact'}</span>
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6">Let's Connect</h2>
-                    <p className="text-xl text-muted mb-12 max-w-xl mx-auto">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">Let's Connect</h2>
+                    <p className="text-base sm:text-xl text-muted mb-12 max-w-xl mx-auto">
                         I'm always open to discussing new opportunities, collaborations, and about being a woman in Computer Science.
                     </p>
 

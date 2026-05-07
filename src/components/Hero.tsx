@@ -27,19 +27,21 @@ const Hero = () => {
             h-[600px] w-[600px] rounded-full bg-accent/20 blur-3xl pointer-events-none"
             />
 
-            {/* Floating code chips */}
-            {chips.map((chip) => (
-                <CodeChip key={chip.text} float {...chip} />
-            ))}
+            {/* Floating code chips - hidden on small screens to avoid clutter/overflow */}
+            <div aria-hidden className="hidden md:block">
+                {chips.map((chip) => (
+                    <CodeChip key={chip.text} float {...chip} />
+                ))}
+            </div>
             {/* Centered content */}
             <div className="relative z-10 flex flex-col items-center text-center max-w-3xl gap-6">
             {/* Heading */}
-                <h1 className="text-5xl md:text-7xl font-bold text-ink tracking-tight">
+                <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-ink tracking-tight">
                     I'm <span className="bg-gradient-to-br from-[hsl(175_70%_35%)] to-[hsl(200_80%_45%)] bg-clip-text text-transparent"> Julie Amon </span>
                 </h1>
 
             {/* Subheading */}
-            <p className="text-xl md:text-2xl text-muted max-w-2xl tracking-tight leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-muted max-w-2xl tracking-tight leading-relaxed">
             Aspiring software engineer and data analyst passionate about creating practical, human-centered technology.
             </p>
 
@@ -52,14 +54,14 @@ const Hero = () => {
             >
             <a
             href="#projects"
-            className="px-10 py-3.5 rounded-full bg-accent text-white text-base font-medium tracking-tight
+            className="px-7 sm:px-10 py-3 sm:py-3.5 rounded-full bg-accent text-white text-sm sm:text-base font-medium tracking-tight
                     shadow-sm shadow-accent/30 hover:bg-accent-hover transition-colors"
             >
                 View Projects
             </a>
             <a
             href="#contact"
-            className="px-10 py-3.5 rounded-full border border-slate-300 text-ink text-base font-medium tracking-tight
+            className="px-7 sm:px-10 py-3 sm:py-3.5 rounded-full border border-slate-300 text-ink text-sm sm:text-base font-medium tracking-tight
                     hover:border-accent hover:text-accent transition-colors"
             >
                 Get in Touch
@@ -70,9 +72,9 @@ const Hero = () => {
             <a
             href="#about"
             aria-label="Scroll Down"
-            className="absolute bottom-20 left-1/2 -translate-x-1/2 text-muted hover:text-accent transition-colors"
+            className="absolute bottom-10 sm:bottom-20 left-1/2 -translate-x-1/2 text-muted hover:text-accent transition-colors"
             >
-               <Mouse className="w-10 h-10 animate-bounce"/>
+               <Mouse className="w-8 h-8 sm:w-10 sm:h-10 animate-bounce"/>
             </a>
         </section>
     );
