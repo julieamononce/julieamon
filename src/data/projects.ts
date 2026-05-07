@@ -26,7 +26,7 @@ import pres1 from "@/assets/Pres1.png";
 import moransp from "@/assets/MORANSPLOT.png";
 import lisa from "@/assets/LISA.png";
 import gt from "@/assets/GT.png";
-import unet from "@/assets/UNET.png";
+import unet from "@/assets/unet.png";
 import chart from "@/assets/CHART.png";
 
 export const projects: Project[] = [
