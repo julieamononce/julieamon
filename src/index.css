@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 @theme{
   /* Colors */
   --color-accent: #14b8a6;
